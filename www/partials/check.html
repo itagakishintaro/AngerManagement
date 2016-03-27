@@ -1,0 +1,40 @@
+<div id="question">
+  <span id="record" class="label-inline teal lighten-1 white-text">{{index+1}}</span>{{questionnarire[index].q}}
+
+  <form action="#" class="check-answer">
+    <p>
+      <input name="answer" type="radio" id="level1" value="1" />
+      <label for="level1">まったく当てはまらない</label>
+    </p>
+    <p>
+      <input name="answer" type="radio" id="level2" value="2" />
+      <label for="level2">やや当てはまらない</label>
+    </p>
+    <p>
+      <input name="answer" type="radio" id="level3" value="3" />
+      <label for="level3">どちらでもない</label>
+    </p>
+    <p>
+      <input name="answer" type="radio" id="level4" value="4" />
+      <label for="level4">やや当てはまる</label>
+    </p>
+    <p>
+      <input name="answer" type="radio" id="level5" value="5" />
+      <label for="level5">非常に当てはまる</label>
+    </p>
+  </form>
+  <div class="check-actions clearfix">
+    <button ng-disabled="index <= 0" class="waves-effect waves-light btn" ng-click="prev()">戻る</button>
+    <button ng-if="index < MAX_INDEX" class="waves-effect waves-light btn" ng-click="next()">次へ</button>
+    <button ng-if="index === MAX_INDEX" class="waves-effect waves-light btn" ng-click="done()">評価</button>
+  </div>
+</div>
+<!-- Modal Alert -->
+<div id="alert" class="modal">
+  <div class="modal-content">
+    <p>答えを選択してください</p>
+  </div>
+  <div class="modal-footer">
+    <button class=" modal-action modal-close waves-effect waves-green btn-flat">OK</button>
+  </div>
+</div>

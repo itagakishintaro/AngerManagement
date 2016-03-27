@@ -1,0 +1,15 @@
+.top {
+  display: table;
+  width: 100%;
+}
+
+.mantra {
+  animation-iteration-count: 6;
+  -moz-animation-iteration-count: 6;
+  -webkit-animation-iteration-count: 6;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}

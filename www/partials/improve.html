@@ -1,0 +1,33 @@
+<div>
+  <span id="record" class="label red lighten-3 white-text">参考値</span>
+  <div>
+    米国の大学生に対する調査データの平均50, 標準偏差10の範囲。数値が大きいほど攻撃性が高いことを示す。
+    <table class="responsive-table bordered">
+      <tr>
+        <th>性別</th>
+        <th ng-repeat="factor in factors">{{factor}}</th>
+        <th>合計</th>
+      </tr>
+      <tr>
+        <td>男性</td>
+        <td ng-repeat="average in averages.male">{{average}}</td>
+      </tr>
+      <tr>
+        <td>女性</td>
+        <td ng-repeat="average in averages.female">{{average}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <span id="record" class="label red lighten-3 white-text">攻撃性評価の記録</span>
+  <div id="point" ng-repeat="(index, point) in points">
+    <div class="card-panel">
+      <div class="grey-text text-darken-3">{{ point.datetime | date: "yyyy/MM/dd" }}</div>
+      <div ng-repeat="(index, factor) in factors">
+        <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">{{factor}}</span>{{ point.point[index] }}</div>
+      </div>
+      <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">合計</span>{{ sum(point.point) }}</div>
+    </div>
+  </div>
+
+</div>

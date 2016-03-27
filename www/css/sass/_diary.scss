@@ -1,0 +1,27 @@
+@import 'common';
+
+label {
+  margin-left: -1rem;
+}
+
+.input-field {
+  margin-top: 2rem;
+}
+
+.anger-level-icon {
+  margin-right: .25rem;
+}
+
+.card-header {
+  @extend .clearfix;
+  margin-bottom: .5rem;
+}
+
+.card-content {
+  height: 20rem;
+  overflow: scroll;
+}
+
+.record {
+  min-height: 20em;
+}

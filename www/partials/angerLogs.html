@@ -1,0 +1,52 @@
+<div ng-controller="AngerLogsController">
+  <!-- Anger Log Form -->
+  <div class="container">
+    <form id="angerLogForm">
+      <div class="input-field">
+        <select id="angerLevel">
+          <option value="" disabled selected>Choose</option>
+          <option value="1">1 (angry in mind)</option>
+          <option value="2">2 (impolite)</option>
+          <option value="3">3 (shout abuse)</option>
+          <option value="4">4 (use violence to things)</option>
+          <option value="5">5 (use violence to people)</option>
+        </select>
+        <label for="angerLevel">Anger Level</label>
+      </div>
+
+      <div class="input-field">
+        <label class="active" for="phrase1">Key Phrase 1</label>
+        <input id="phrase1" type="text" class="validate">
+      </div>
+      <div class="input-field">
+        <label class="active" for="phrase2">Key Phrase 2</label>
+        <input id="phrase2" type="text" class="validate">
+      </div>
+      <div class="input-field">
+        <label class="active" for="phrase3">Key Phrase 3</label>
+        <input id="phrase3" type="text" class="validate">
+      </div>
+
+      <div class="clearfix">
+        <button id="saveAngerLog" type="button" class="btn fr" ng-click="add()">save</button>
+      </div>
+    </form>
+
+    <div id="angerLogs" ng-repeat="log in logs">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ log.snap }}">
+          <div class="card-angerlevel" ng-bind-html="log.angerLevelIcon"></div>
+          <div class="card-datetime">{{ log.datetime }}</div>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>{{ log.phrase1 }}</li>
+            <li>{{ log.phrase2 }}</li>
+            <li>{{ log.phrase3 }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

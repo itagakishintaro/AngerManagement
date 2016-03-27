@@ -1,0 +1,60 @@
+<form id="angerLogForm">
+  <div class="input-field">
+    <select id="angerLevel">
+      <option value="" disabled selected>選択</option>
+      <option value="1">1 (こころの中でおさめた)</option>
+      <option value="2">2 (失礼な言動)</option>
+      <option value="3">3 (怒鳴るなどの攻撃的な言動)</option>
+      <option value="4">4 (暴力)</option>
+    </select>
+    <label for="angerLevel">問題のレベル</label>
+  </div>
+
+  <div class="input-field">
+    <textarea placeholder="怒りのきっかけ" id="situation" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+    <label class="active" for="situation">きっかけ</label>
+  </div>
+  <div class="input-field ">
+    <textarea placeholder="バカにされた、不公平だなど " id="feel" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+    <label class="active" for="feel">感じたこと</label>
+  </div>
+  <div class="input-field">
+    <textarea placeholder="暴言を吐いた、殴ったなど" id="action" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+    <label class="active" for="action">その時の反応</label>
+  </div>
+  <div class="input-field">
+    <textarea placeholder="怒りを静めるためにしたこと" id="try" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+    <label class="active" for="try">努力したこと</label>
+  </div>
+  <div class="input-field">
+    <textarea placeholder="冷静になった後で考えたこと" id="think" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+    <label class="active" for="think">後で考えたこと</label>
+  </div>
+
+  <div class="clearfix ">
+    <button id="saveAngerLog " type="button " class="btn fr " ng-click="save() ">save</button>
+  </div>
+</form>
+<hr>
+
+<div class="record">
+  <span id="record" class="label red lighten-3 white-text">過去の記録</span>
+  <div id="angerLogs" ng-repeat="log in logs" class="record">
+    <div class="card {{ log.color }}">
+      <div class="card-content">
+        <div class="card-header">
+          <div class="fl grey-text text-lighten-4" ng-bind-html="log.angerLevelIcon"></div>
+          <div class="fr grey-text text-darken-3">{{ log.datetime }}</div>
+        </div>
+        <div>
+
+          <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">状況</span>{{ log.situation }}</div>
+          <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">感じたこと</span>{{ log.feel }}</div>
+          <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">その時の反応</span>{{ log.action }}</div>
+          <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">努力したこと</span>{{ log.try }}</div>
+          <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">後で考えたこと</span>{{ log.think }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

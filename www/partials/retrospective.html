@@ -1,0 +1,51 @@
+<div>
+  ダイアリーをみなおして、自分の「考え方」「行動」について、よかった点(Keep)と問題点(Problem)をさがし、次の目標(Try)を決めましょう。
+
+  <form id="retrospectiveForm">
+    <div>
+      <div class="input-field">
+        <textarea placeholder="うまくいった考え方、行動、習慣、状況など" id="keep" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+        <label class="active" for="keep">Keep
+          <a class="modal-positive-trigger" href=""><img src="img/info.png" alt="info" class="info-icon"></a>
+        </label>
+      </div>
+      <div class="input-field">
+        <textarea placeholder="怒りにつながった考え方、行動、習慣、状況など" id="problem" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+        <label class="active" for="problem">Problem
+          <a class="modal-negative-trigger" href=""><img src="img/info.png" alt="info" class="info-icon"></a>
+        </label>
+      </div>
+      <div class="input-field">
+        <textarea placeholder="怒りを和らげるためにやってみること" id="try" class="materialize-textarea" ng-click="moveTo($event)"></textarea>
+        <label class="active" for="try">Try
+          <a class="modal-positive-trigger" href=""><img src="img/info.png" alt="info" class="info-icon"></a>
+        </label>
+      </div>
+      <div class="clearfix">
+        <button id="mantraSave" class="waves-effect waves-green btn fr" ng-click="save()">保存</button>
+      </div>
+    </div>
+  </form>
+
+  <hr>
+  <!-- 過去の記録 -->
+  <div class="record">
+    <span id="record" class="label red lighten-3 white-text">過去の記録</span>
+    <div id="kpt" ng-repeat="kpt in kpts">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-header">
+            <div class="fl grey-text text-lighten-4" ng-bind-html="log.angerLevelIcon"></div>
+            <div class="fr grey-text text-darken-3">{{ kpt.datetime | date: "yyyy/MM/dd" }}</div>
+          </div>
+          <div>
+            <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">Keep</span>{{ kpt.keep }}</div>
+            <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">Problem</span>{{ kpt.problem }}</div>
+            <div class="pre-wrap  grey-text text-darken-3"><span class="label-inline grey lighten-4">Try</span>{{ kpt.try }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

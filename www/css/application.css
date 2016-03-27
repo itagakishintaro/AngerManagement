@@ -1,0 +1,99 @@
+.check-actions {
+  margin-top: 2em; }
+
+.check-answer {
+  margin-left: 1em; }
+
+label {
+  margin-left: -1rem; }
+
+.input-field {
+  margin-top: 2rem; }
+
+.anger-level-icon {
+  margin-right: .25rem; }
+
+.card-header {
+  margin-bottom: .5rem; }
+
+.card-content {
+  height: 20rem;
+  overflow: scroll; }
+
+.record {
+  min-height: 20em; }
+
+.top {
+  display: table;
+  width: 100%; }
+
+.mantra {
+  animation-iteration-count: 6;
+  -moz-animation-iteration-count: 6;
+  -webkit-animation-iteration-count: 6;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle; }
+
+.menu {
+  margin-bottom: 1rem; }
+
+.logo {
+  margin-left: 1rem; }
+
+.menu-icon {
+  height: 2rem;
+  margin-left: .8rem;
+  margin-top: 1rem; }
+
+.max-width {
+  margin: 0 0 1rem;
+  width: 100%; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix:after, .card-header:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.label {
+  border-radius: .25rem;
+  display: inline-block;
+  margin-bottom: .25rem;
+  margin-right: .25rem;
+  padding: .25rem 1rem;
+  text-align: center; }
+
+.label-inline {
+  border-radius: .25rem;
+  margin-right: .25rem;
+  padding: 0 .5rem; }
+
+.pre-wrap {
+  white-space: pre-wrap; }
+
+#cboxClose {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(images/controls.png) no-repeat -25px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px; }
+
+#cboxLoadedContent {
+  margin-bottom: 0;
+  margin-top: 28px; }
+
+.info-icon {
+  height: 1.5em;
+  margin-left: 1em; }
