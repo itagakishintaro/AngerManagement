@@ -68,3 +68,7 @@ node_modules
 
 # Keystore
 *.keystore
+
+# Release
+release
+*.apk
